@@ -4,7 +4,8 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
   },
   "extends": [
     "eslint:recommended",
@@ -15,6 +16,10 @@
     "plugin:import/typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:unicorn/recommended",
+    "plugin:promise/recommended",
+    "plugin:sonarjs/recommended",
     "prettier"
   ],
   "plugins": [
@@ -23,7 +28,10 @@
     "jsx-a11y",
     "import",
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "unicorn",
+    "sonarjs",
+    "promise"
   ],
   "env": {
     "browser": true,
