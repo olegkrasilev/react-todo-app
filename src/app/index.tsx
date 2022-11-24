@@ -1,7 +1,7 @@
-import React from 'react'
+import { Routing } from '../pages'
+
 import { withProviders } from './providers'
 import './index.scss'
-import { Routing } from '../pages'
 
 function App(): JSX.Element {
   return <Routing />
