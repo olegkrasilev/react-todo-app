@@ -1,12 +1,8 @@
-import { lazy } from "react";
-import { Routes, Route } from "react-router";
-
-const TestPage = lazy(() => import("./test"));
+import { useRoutes } from "react-router";
+import routesConfig from "../shared/config/react-router";
 
 export const Routing = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<TestPage />} />
-    </Routes>
-  );
+  const routes = useRoutes(routesConfig);
+
+  return routes;
 };
