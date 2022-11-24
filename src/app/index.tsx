@@ -3,7 +3,7 @@ import { withProviders } from './providers'
 import './index.scss'
 import { Routing } from '../pages'
 
-function App() {
+function App(): JSX.Element {
   return <Routing />
 }
 
