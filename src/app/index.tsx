@@ -1,10 +1,10 @@
-import React from "react";
-import { withProviders } from "./providers";
-import "./index.scss";
-import { Routing } from "../pages";
+import React from 'react'
+import { withProviders } from './providers'
+import './index.scss'
+import { Routing } from '../pages'
 
 function App() {
-  return <Routing />;
+  return <Routing />
 }
 
-export default withProviders(App);
+export default withProviders(App)

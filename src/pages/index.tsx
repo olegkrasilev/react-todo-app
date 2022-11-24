@@ -1,8 +1,8 @@
-import { useRoutes } from "react-router";
-import routesConfig from "../shared/config/react-router";
+import { useRoutes } from 'react-router'
+import routesConfig from '../shared/config/react-router'
 
 export const Routing = () => {
-  const routes = useRoutes(routesConfig);
+  const routes = useRoutes(routesConfig)
 
-  return routes;
-};
+  return routes
+}

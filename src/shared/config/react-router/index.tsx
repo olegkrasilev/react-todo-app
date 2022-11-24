@@ -1,11 +1,11 @@
-import { RouteObject } from "react-router-dom";
-import TestPage from "../../../pages/test";
+import { RouteObject } from 'react-router-dom'
+import TestPage from '../../../pages/test'
 
 const routesConfig: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <TestPage />,
   },
-];
+]
 
-export default routesConfig;
+export default routesConfig
