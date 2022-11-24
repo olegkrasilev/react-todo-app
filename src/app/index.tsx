@@ -1,10 +1,10 @@
-import { Routing } from '../pages'
+import { Routing } from '../pages';
 
-import { withProviders } from './providers'
-import './index.scss'
+import { withProviders } from './providers';
+import './index.scss';
 
 function App(): JSX.Element {
-  return <Routing />
+  return <Routing />;
 }
 
-export default withProviders(App)
+export default withProviders(App);

@@ -25,7 +25,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint:all": "npm run lint:ts && npm run lint:scss && npm run lint:prettier",
+    "lint:fixAll": "npm run lint:ts:fix && npm run lint:scss:fix && npm run lint:prettier:fix",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "stylelint \"**/*.scss\"",
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
+    "lint:prettier": "prettier --check \"**/*.*\"",
+    "lint:prettier:fix": "prettier --write \"**/*.*\""
   },
   "browserslist": {
     "production": [
