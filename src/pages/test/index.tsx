@@ -1,5 +1,5 @@
 const TestPage = () => {
-  return <div>Test Page</div>;
+  throw new Error('Error');
 };
 
 export default TestPage;
