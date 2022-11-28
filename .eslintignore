@@ -1,3 +1,4 @@
 node_modules
 public
 react-app-env.d.ts
+.storybook
