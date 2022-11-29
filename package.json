@@ -41,7 +41,8 @@
     "lint:prettier": "prettier --check \"**/*.*\"",
     "lint:prettier:fix": "prettier --write \"**/*.*\"",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "generate": "plop component"
   },
   "browserslist": {
     "production": [
@@ -84,6 +85,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-storybook": "^0.6.7",
     "husky": "^8.0.2",
+    "plop": "^3.1.1",
     "prettier": "^2.8.0",
     "prop-types": "^15.8.1",
     "storybook-css-modules": "^1.0.8",
