@@ -102,7 +102,8 @@
       "error",
       { "newlines-between": "always-and-inside-groups" }
     ],
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "unicorn/consistent-function-scoping": "off"
   },
   "settings": {
     "react": {
