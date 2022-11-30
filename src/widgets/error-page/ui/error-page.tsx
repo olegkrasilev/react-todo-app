@@ -15,5 +15,3 @@ export const ErrorPage = () => {
     </section>
   );
 };
-
-export default ErrorPage;
