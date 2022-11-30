@@ -1,3 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
 html {
   height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+}
+
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select,
+address {
+  font: inherit;
+}
+
+label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input[type='text'],
+input[type='button'],
+input[type='submit'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+textarea {
+  border-radius: 0;
+  appearance: none;
+}
+
+.reset-btn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
