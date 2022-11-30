@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
+import { LangSwitcher } from 'widgets/lang-switcher';
+
 const TestPage = () => {
   const { t } = useTranslation();
 
