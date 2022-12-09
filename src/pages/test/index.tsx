@@ -9,7 +9,7 @@ import { LangSwitcher } from 'widgets/lang-switcher';
 
 const TestPage = () => {
   const { t } = useTranslation();
-  const { data, isLoading } = useGetAllTodosQuery('todo');
+  const { data, isLoading } = useGetAllTodosQuery('');
 
   console.log(data);
 
