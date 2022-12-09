@@ -27,7 +27,7 @@ export const LangSwitcher = () => {
       styles={{
         container: (baseStyles) => ({
           ...baseStyles,
-          width: 115,
+          display: 'inline-block',
         }),
       }}
       isSearchable={false}
