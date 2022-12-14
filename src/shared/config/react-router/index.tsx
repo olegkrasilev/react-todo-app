@@ -1,10 +1,10 @@
 import { RouteObject } from 'react-router-dom';
 
-import TestPage from 'pages/test';
+import { TodoListPage } from 'pages/TodoListPage';
 
 export const routesConfig: RouteObject[] = [
   {
     path: '/',
-    element: <TestPage />,
+    element: <TodoListPage />,
   },
 ];

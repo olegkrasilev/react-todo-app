@@ -7,7 +7,7 @@ export const todoApi = createApi({
   reducerPath: 'todoApi',
   baseQuery: axiosBaseQuery(),
   endpoints: (builder) => ({
-    getAllTodo: builder.query<TodoModel, string>({
+    getAllTodo: builder.query<TodoModel[], string>({
       query: () => {
         return {
           url: 'todo',
