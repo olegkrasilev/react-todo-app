@@ -1,14 +1,21 @@
 /* eslint-disable unicorn/no-null */
-import classNames from 'classnames';
-import { useTranslation } from 'react-i18next';
-
-import css from './todo-list-page.module.scss';
+import { useState } from 'react';
 
 import { useGetAllTodoQuery } from 'shared/api';
 import { ErrorPage } from 'widgets/error-page';
+import { Spinner } from 'widgets/spinner';
 
 const TodoListPage = () => {
-  const { data, error, isLoading } = useGetAllTodoQuery('');
+  const [isLoading, setLoading] = useState(true);
+  const { data, error } = useGetAllTodoQuery('');
+
+  if (isLoading) {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return <Spinner loading={isLoading} />;
+  }
 
   if (!data) {
     return <ErrorPage />;
@@ -16,10 +23,6 @@ const TodoListPage = () => {
 
   if (error) {
     return <ErrorPage />;
-  }
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
   }
 
   return (
