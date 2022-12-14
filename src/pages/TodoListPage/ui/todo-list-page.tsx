@@ -5,16 +5,17 @@ import { useTranslation } from 'react-i18next';
 import css from './todo-list-page.module.scss';
 
 import { useGetAllTodoQuery } from 'shared/api';
+import { ErrorPage } from 'widgets/error-page';
 
 const TodoListPage = () => {
   const { data, error, isLoading } = useGetAllTodoQuery('');
 
   if (!data) {
-    return null;
+    return <ErrorPage />;
   }
 
   if (error) {
-    throw new Error('Something went wrong...');
+    return <ErrorPage />;
   }
 
   if (isLoading) {
