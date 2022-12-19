@@ -1,7 +1,5 @@
-/* eslint-disable unicorn/no-null */
-import { useState } from 'react';
-
 import { useGetAllTodoQuery } from 'shared/api';
+import { schemaTodo } from 'shared/interfaces';
 import { ErrorPage } from 'widgets/error-page';
 import { Spinner } from 'widgets/spinner';
 
@@ -15,6 +13,9 @@ const TodoListPage = () => {
   if (!data) {
     return <ErrorPage />;
   }
+
+  /* Zod Validation */
+  schemaTodo.array().parse(data);
 
   if (error) {
     return <ErrorPage />;
