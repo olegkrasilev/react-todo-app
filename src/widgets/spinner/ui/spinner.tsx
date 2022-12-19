@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { ClimbingBoxLoader } from 'react-spinners';
+import { PuffLoader } from 'react-spinners';
 
 import styles from './spinner.module.scss';
 
@@ -16,7 +16,7 @@ const override: CSSProperties = {
 export const Spinner = ({ loading }: SpinnerProperties) => {
   return (
     <div className={styles.spinnerWrapper}>
-      <ClimbingBoxLoader
+      <PuffLoader
         loading={loading}
         cssOverride={override}
         aria-label='Loading Spinner'
