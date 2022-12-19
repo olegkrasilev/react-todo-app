@@ -8,16 +8,16 @@ export const todoApi = createApi({
   baseQuery: axiosBaseQuery(),
   endpoints: (builder) => ({
     getAllTodo: builder.query<TodoModel[], string>({
-      query: () => {
+      query: (limit: string) => {
         return {
-          url: 'todo',
+          url: `/todos?_start=0&_limit=${limit}`,
         };
       },
     }),
     getTodoByID: builder.query<TodoModel, string>({
       query: (id: string) => {
         return {
-          url: `todo/${id}`,
+          url: `todos/${id}`,
         };
       },
     }),

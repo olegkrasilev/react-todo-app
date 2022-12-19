@@ -6,14 +6,9 @@ import { ErrorPage } from 'widgets/error-page';
 import { Spinner } from 'widgets/spinner';
 
 const TodoListPage = () => {
-  const [isLoading, setLoading] = useState(true);
-  const { data, error } = useGetAllTodoQuery('');
+  const { data, error, isLoading } = useGetAllTodoQuery('20');
 
   if (isLoading) {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
     return <Spinner loading={isLoading} />;
   }
 
