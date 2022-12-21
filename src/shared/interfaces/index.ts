@@ -1,1 +1,1 @@
-export { schemaTodo } from './todo';
+export * from './todo';

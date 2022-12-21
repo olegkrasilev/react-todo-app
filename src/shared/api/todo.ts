@@ -1,7 +1,7 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 
 import { axiosBaseQuery } from 'shared/config/axios';
-import { TodoModel } from 'shared/interfaces/todo';
+import { TodoModel } from 'shared/interfaces';
 
 export const todoApi = createApi({
   reducerPath: 'todoApi',

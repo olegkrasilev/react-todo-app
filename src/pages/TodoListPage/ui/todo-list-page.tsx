@@ -34,7 +34,6 @@ const TodoListPage = () => {
           </li>
         );
       })}
-      <ThemeSwitcher />
     </ul>
   );
 };
