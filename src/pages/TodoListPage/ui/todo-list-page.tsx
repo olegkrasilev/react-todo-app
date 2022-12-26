@@ -1,3 +1,4 @@
+import { TodoCard } from 'entities/todo/ui/todo-card';
 import { useGetAllTodoQuery, useGetTodoByIDQuery } from 'shared/api';
 import { schemaTodo } from 'shared/interfaces';
 import { ErrorPage } from 'widgets/error-page';
@@ -25,12 +26,12 @@ const TodoListPage = () => {
     <ul className=''>
       {data.map(({ completed, id, title }) => {
         return (
-          <li
-            id={String(id)}
+          <TodoCard
             key={id}
-          >
-            {title}
-          </li>
+            id={id}
+            completed={completed}
+            title={title}
+          />
         );
       })}
     </ul>
