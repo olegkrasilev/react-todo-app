@@ -1,11 +1,10 @@
-import { useGetAllTodoQuery } from 'shared/api';
+import { useGetAllTodoQuery, useGetTodoByIDQuery } from 'shared/api';
 import { schemaTodo } from 'shared/interfaces';
 import { ErrorPage } from 'widgets/error-page';
 import { Spinner } from 'widgets/spinner';
-import { ThemeSwitcher } from 'widgets/theme-switcher';
 
 const TodoListPage = () => {
-  const { data, error, isLoading } = useGetAllTodoQuery('20');
+  const { data, error, isLoading } = useGetAllTodoQuery('');
 
   if (isLoading) {
     return <Spinner loading={isLoading} />;
