@@ -6,6 +6,7 @@ import { TodoModel } from 'shared/interfaces';
 export const todoApi = createApi({
   reducerPath: 'todoApi',
   baseQuery: axiosBaseQuery(),
+  tagTypes: ['Todo'],
   endpoints: (builder) => ({
     getAllTodo: builder.query<TodoModel[], string>({
       query: () => {
@@ -13,6 +14,7 @@ export const todoApi = createApi({
           url: `/todo`,
         };
       },
+      providesTags: ['Todo'],
     }),
     getTodoByID: builder.query<TodoModel, number>({
       query: (id: number) => {
@@ -20,8 +22,22 @@ export const todoApi = createApi({
           url: `todo/${id}`,
         };
       },
+      providesTags: ['Todo'],
+    }),
+    deleteTodoById: builder.mutation({
+      query: (id: number) => {
+        return {
+          url: `/todo/${id}`,
+          method: 'DELETE',
+        };
+      },
+      invalidatesTags: ['Todo'],
     }),
   }),
 });
 
-export const { useGetAllTodoQuery, useGetTodoByIDQuery } = todoApi;
+export const {
+  useGetAllTodoQuery,
+  useGetTodoByIDQuery,
+  useDeleteTodoByIdMutation,
+} = todoApi;
