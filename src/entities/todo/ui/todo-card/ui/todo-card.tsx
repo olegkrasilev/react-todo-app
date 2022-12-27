@@ -1,17 +1,21 @@
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 
 import { useNavigate } from 'react-router-dom';
 
-import css from './todo-card.module.scss';
+import styles from './todo-card.module.scss';
 
 import { TodoModel } from 'shared/interfaces';
 import { DeleteTodo } from 'features/delete-todo';
 
 export const TodoCard = ({ completed, id, title }: TodoModel) => {
   const navigate = useNavigate();
+  const cx = classNames.bind(styles);
+  const className = cx({
+    completed,
+  });
 
   return (
-    <li className={classNames({ completed: completed })}>
+    <li className={className}>
       {title} <br />
       <DeleteTodo id={id} />
       <button
