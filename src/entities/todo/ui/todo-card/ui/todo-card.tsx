@@ -6,6 +6,7 @@ import styles from './todo-card.module.scss';
 
 import { TodoModel } from 'shared/interfaces';
 import { DeleteTodo } from 'features/delete-todo';
+import { ToggleTodoStatus } from 'features/toggle-todo-status';
 
 export const TodoCard = ({ completed, id, title }: TodoModel) => {
   const navigate = useNavigate();
@@ -24,6 +25,10 @@ export const TodoCard = ({ completed, id, title }: TodoModel) => {
       >
         More
       </button>
+      <ToggleTodoStatus
+        id={id}
+        completed={completed}
+      />
     </li>
   );
 };
