@@ -16,6 +16,7 @@
     "compose-function": "^3.0.3",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-plugin-unicorn": "^45.0.0",
+    "framer-motion": "^8.0.2",
     "i18next": "^22.0.6",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.0.2",
@@ -51,7 +52,7 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "generate": "plop component",
-    "json-server-start": "json-server --watch ./json-server/db.json --port 3001 --delay 1000"
+    "json-server-start": "json-server --watch ./json-server/db.json --port 3001 --delay 3000"
   },
   "browserslist": {
     "production": [

@@ -1,40 +1,43 @@
 import { TodoCard } from 'entities/todo/ui/todo-card';
-import { useGetAllTodoQuery, useGetTodoByIDQuery } from 'shared/api';
+import { useGetAllTodoQuery } from 'shared/api';
 import { schemaTodo } from 'shared/interfaces';
 import { ErrorPage } from 'widgets/error-page';
 import { Spinner } from 'widgets/spinner';
 
 const TodoListPage = () => {
-  const { data, error, isLoading } = useGetAllTodoQuery('');
+  const { isError, isLoading, currentData } = useGetAllTodoQuery('');
+
+  if (isError) {
+    return <ErrorPage />;
+  }
 
   if (isLoading) {
     return <Spinner isLoading={isLoading} />;
   }
 
-  if (!data) {
-    return <ErrorPage />;
+  if (!(Array.isArray(currentData) && currentData.length > 0)) {
+    return <h1>No data...</h1>;
   }
 
   /* Zod Validation */
-  schemaTodo.array().parse(data);
-
-  if (error) {
-    return <ErrorPage />;
-  }
+  schemaTodo.array().parse(currentData);
 
   return (
-    <ul className=''>
-      {data.map(({ completed, id, title }) => {
-        return (
-          <TodoCard
-            key={id}
-            id={id}
-            completed={completed}
-            title={title}
-          />
-        );
-      })}
-    </ul>
+    <>
+      <Spinner isLoading={isLoading} />
+      <ul className=''>
+        {currentData.map(({ completed, id, title }) => {
+          return (
+            <TodoCard
+              key={id}
+              id={id}
+              completed={completed}
+              title={title}
+            />
+          );
+        })}
+      </ul>
+    </>
   );
 };
 
