@@ -17,5 +17,5 @@ Template.story = {
 
 export const Default = Template.bind({});
 Default.args = {
-  loading: true,
+  isLoading: true,
 };

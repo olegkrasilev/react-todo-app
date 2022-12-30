@@ -1,27 +1,16 @@
-import { CSSProperties } from 'react';
-import { PuffLoader } from 'react-spinners';
-
 import styles from './spinner.module.scss';
 
 interface SpinnerProperties {
-  loading: boolean;
+  isLoading?: boolean;
 }
 
-const override: CSSProperties = {
-  display: 'block',
-  margin: '0 auto',
-  borderColor: 'red',
-};
-
-export const Spinner = ({ loading }: SpinnerProperties) => {
+export const Spinner = ({ isLoading }: SpinnerProperties) => {
   return (
-    <div className={styles.spinnerWrapper}>
-      <PuffLoader
-        loading={loading}
-        cssOverride={override}
-        aria-label='Loading Spinner'
-        data-testid='Spinner'
-      />
+    <div className={styles.wrapper}>
+      <div className={styles.spinner}>
+        <div className={styles.doubleBounce}></div>
+        <div className={styles.doubleBounce2}></div>
+      </div>
     </div>
   );
 };

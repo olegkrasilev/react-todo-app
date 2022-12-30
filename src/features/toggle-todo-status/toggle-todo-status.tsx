@@ -15,7 +15,7 @@ export const ToggleTodoStatus = ({ id, completed }: TodoStatus) => {
   };
 
   if (isLoading) {
-    return <Spinner loading={isLoading} />;
+    return <Spinner isLoading={isLoading} />;
   }
 
   if (error) {

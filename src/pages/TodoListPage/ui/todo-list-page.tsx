@@ -8,7 +8,7 @@ const TodoListPage = () => {
   const { data, error, isLoading } = useGetAllTodoQuery('');
 
   if (isLoading) {
-    return <Spinner loading={isLoading} />;
+    return <Spinner isLoading={isLoading} />;
   }
 
   if (!data) {

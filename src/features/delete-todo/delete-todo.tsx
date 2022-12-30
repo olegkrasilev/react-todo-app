@@ -15,7 +15,7 @@ export const DeleteTodo = ({ id }: ID) => {
   };
 
   if (isLoading) {
-    return <Spinner loading={isLoading} />;
+    return <Spinner isLoading={isLoading} />;
   }
 
   if (error) {

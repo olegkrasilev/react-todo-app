@@ -5,7 +5,7 @@ import { Spinner } from './spinner';
 
 describe('<Spinner />', () => {
   test('it should mount', () => {
-    render(<Spinner loading={true} />);
+    render(<Spinner isLoading={true} />);
 
     const spinner = screen.getByTestId('Spinner');
 
