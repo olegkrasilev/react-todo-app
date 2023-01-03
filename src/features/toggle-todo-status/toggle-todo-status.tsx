@@ -23,8 +23,11 @@ export const ToggleTodoStatus = ({ id, completed }: TodoStatus) => {
   }
 
   return (
-    <button onClick={() => void handleToggleTodo(id, !completed)}>
-      Toggle Status
-    </button>
+    <>
+      <Spinner isLoading={isLoading} />
+      <button onClick={() => void handleToggleTodo(id, !completed)}>
+        Toggle Status
+      </button>
+    </>
   );
 };
