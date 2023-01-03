@@ -6,8 +6,6 @@ interface SpinnerProperties {
 }
 
 export const Spinner = ({ isLoading }: SpinnerProperties) => {
-  console.log(isLoading);
-
   return (
     <AnimatePresence>
       {isLoading && (
