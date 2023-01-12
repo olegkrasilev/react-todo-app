@@ -1,3 +1,3 @@
 export const translationsRu = {
-  welcome: 'Привет!',
+  todoList: 'Список Дел',
 };

@@ -1,3 +1,3 @@
 export const translationsEn = {
-  welcome: 'Welcome!',
+  todoList: 'TodoList',
 };
