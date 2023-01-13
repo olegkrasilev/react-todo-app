@@ -23,7 +23,7 @@ export const LangSwitcher = () => {
     <Select
       options={options}
       onChange={langSwitcherHandler}
-      defaultValue={{ label: 'English', value: 'en' }}
+      defaultValue={{ label: 'Русский', value: 'ru' }}
       styles={{
         container: (baseStyles) => ({
           ...baseStyles,
