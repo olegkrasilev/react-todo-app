@@ -1,4 +1,5 @@
 import { TodoCard } from 'entities/todo/ui/todo-card';
+import { AddTodo } from 'features/add-todo';
 import { useGetAllTodoQuery } from 'shared/api';
 import { schemaTodo } from 'shared/interfaces';
 import { ErrorPage } from 'widgets/error-page';
@@ -25,6 +26,7 @@ const TodoListPage = () => {
   return (
     <>
       <Spinner isLoading={isLoading} />
+      <AddTodo />
       <ul className=''>
         {currentData.map(({ completed, id, title }) => {
           return (

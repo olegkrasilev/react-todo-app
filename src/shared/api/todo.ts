@@ -43,6 +43,16 @@ export const todoApi = createApi({
       },
       invalidatesTags: ['Todo'],
     }),
+    addNewTodo: builder.mutation<void, Omit<TodoModel, 'id'>>({
+      query: ({ title, completed }) => {
+        return {
+          url: '/todo/',
+          method: 'POST',
+          data: { title, completed },
+        };
+      },
+      invalidatesTags: ['Todo'],
+    }),
   }),
 });
 
@@ -51,4 +61,5 @@ export const {
   useGetTodoByIDQuery,
   useDeleteTodoByIdMutation,
   useToggleTodoStatusMutation,
+  useAddNewTodoMutation,
 } = todoApi;
